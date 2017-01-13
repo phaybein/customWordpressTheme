@@ -44,11 +44,9 @@ get_header(); ?>
 
 				endif; ?>
 			</div>
-
 			<div id="sidebar">
 				<?php get_sidebar(); ?>
 			</div>
-
 		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

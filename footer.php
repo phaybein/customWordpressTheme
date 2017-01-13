@@ -13,9 +13,8 @@
 
 	</div><!-- #content -->
 
-	<footer>
+	<footer role="contentinfo">
 		<div class="wrapper">
-
 			<ul>
 				<li>New York Restaurant</li>
 				<li>3926 Anmore Road</li>
@@ -38,8 +37,8 @@
 				<li><img src="<?php echo(get_template_directory_uri()); ?>/images/whiteLogo.png" alt="logo"></li>
 				<li>&copy; All rights reserved 2015</li>
 			</ul>
-
-		</div><!-- .site-info -->
+			<?php dynamic_sidebar( 'footer' ); ?>
+		</div><!-- .wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
