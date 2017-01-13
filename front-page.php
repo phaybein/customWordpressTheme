@@ -71,30 +71,18 @@ get_header(); ?>
 
                 <section id="featured">
                     <ul>
-                        <li>
-                            <img src="images/Thumb-1.jpg" alt="">
-                            <a href="">Fugiat nulla sint</a>
-                            <span>$30</span>
-                            <span class="rating"></span>
-                        </li>
-                        <li>
-                            <img src="images/Thumb-1.jpg" alt="">
-                            <a href="">Fugiat nulla sint</a>
-                            <span>$30</span>
-                            <span class="rating"></span>
-                        </li>
-                        <li>
-                            <img src="images/Thumb-1.jpg" alt="">
-                            <a href="">Fugiat nulla sint</a>
-                            <span>$30</span>
-                            <span class="rating"></span>
-                        </li>            
-                        <li>
-                            <img src="images/Thumb-1.jpg" alt="">
-                            <a href="">Fugiat nulla sint</a>
-                            <span>$30</span>
-                            <span class="rating"></span>
-                        </li>
+                        <!--/* Start custom Loop */-->
+                        <?php $myQuery = new WP_Query('category_name=menu-items&posts_per_page=4'); ?>
+                        <?php while ( $myQuery->have_posts() ) : $myQuery->the_post(); ?>
+
+                            <li>
+                                <?php the_post_thumbnail(); ?>
+                                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                                <span><?php echo get_post_meta($post->ID, 'price', true);  ?></span>
+                                <span class="star-<?php echo get_post_meta($post->ID, 'rating', true); ?> rating"></span>
+                            </li>
+
+                        <?php endwhile; ?>
                     </ul>
                 </section>                  
             </div>
