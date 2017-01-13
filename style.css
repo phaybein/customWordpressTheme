@@ -1086,5 +1086,32 @@ footer a {
 .comment-list {
 	list-style-type: none;
 	padding: 0;
-	
+}
+
+.rating {
+	height: 12px;
+	background: url(images/Star.png);
+	float: none !important;
+	display: block;
+	clear: both;
+}
+
+.rating.star-5 {
+	width: 60px;
+}
+
+.rating.star-4 {
+	width: 48px;
+}
+
+.rating.star-3 {
+	width: 36px;
+}
+
+.rating.star-2 {
+	width: 24px;
+}
+
+.rating.star-1 {
+	width: 12px;
 }
